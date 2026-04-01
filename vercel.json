@@ -2,15 +2,8 @@
   "version": 2,
   "buildCommand": "npm run build",
   "outputDirectory": "dist",
-  "installCommand": "npm install",
-  "framework": null,
-  "functions": {},
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/index.html"
-    }
-  ],
+  "cleanUrls": true,
+  "trailingSlash": false,
   "headers": [
     {
       "source": "/assets/images/(.*)",
@@ -22,7 +15,7 @@
       ]
     },
     {
-      "source": "/(.*\\.(css|js))",
+      "source": "/(.*\\.(css|js|woff2|woff))",
       "headers": [
         {
           "key": "Cache-Control", 
@@ -44,6 +37,10 @@
         {
           "key": "X-XSS-Protection",
           "value": "1; mode=block"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
         }
       ]
     }
