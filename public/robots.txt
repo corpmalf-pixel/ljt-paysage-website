@@ -1,0 +1,26 @@
+# LJT Paysage - Robots.txt for SEO
+
+User-agent: *
+Allow: /
+Allow: /index.html
+Allow: /styles.css
+Allow: /script.js
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.php
+Disallow: /*.cgi
+
+# Google specific
+User-agent: Googlebot
+Allow: /
+
+# Bing specific
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://holua.duckdns.org/sitemap.xml
+
+# Crawl delay (optional - adjust if needed)
+Crawl-delay: 0
+Request-rate: 30/60

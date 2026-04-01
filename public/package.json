@@ -1,0 +1,38 @@
+{
+  "name": "ljt-paysage-site",
+  "version": "1.0.0",
+  "description": "Site vitrine premium pour LJT Paysage - Jardinier paysagiste haut de gamme",
+  "main": "index.html",
+  "scripts": {
+    "build": "node build.js",
+    "serve": "npx http-server . -c-1 -p 8080 -o",
+    "test": "npm run build",
+    "deploy": "echo 'See DEPLOYMENT.md for deployment instructions'",
+    "lighthouse": "lhci autorun",
+    "lighthouse:desktop": "lighthouse https://holua.duckdns.org --view",
+    "lighthouse:mobile": "lighthouse https://holua.duckdns.org --preset=mobile --view"
+  },
+  "keywords": [
+    "paysagiste",
+    "jardin",
+    "haut de gamme",
+    "Paris",
+    "création parcs",
+    "arrosage automatique"
+  ],
+  "author": "LJT Paysage",
+  "license": "proprietary",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/malf-org/ljt-paysage.git"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "devDependencies": {
+    "@lhci/cli": "^0.11.0",
+    "http-server": "^14.1.1",
+    "lighthouse": "^11.0.0"
+  },
+  "dependencies": {}
+}

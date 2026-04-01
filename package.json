@@ -1,0 +1,36 @@
+{
+  "name": "ljt-paysage-website",
+  "version": "2.0.0",
+  "description": "Site web professionnel LJT Paysage - Jardinerie et services paysagers",
+  "main": "scripts/build.js",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "dev": "python3 -m http.server 8000 --directory dist",
+    "deploy": "npm run build && vercel --prod",
+    "start": "npm run build && npm run dev",
+    "clean": "rm -rf dist/",
+    "test": "node scripts/build.js",
+    "structure": "tree -I 'node_modules|.git'"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "keywords": [
+    "paysagiste",
+    "jardin",
+    "website", 
+    "seo",
+    "responsive",
+    "vercel"
+  ],
+  "author": "MALF <corpmalf-pixel@github.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/corpmalf-pixel/ljt-paysage-website.git"
+  },
+  "homepage": "https://ljt-paysage.vercel.app",
+  "devDependencies": {
+    "lighthouse": "^11.0.0"
+  }
+}
